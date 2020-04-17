@@ -1,4 +1,5 @@
 const os = require('os');
+const log = require('./logger')
 
 //setInterval(() => {}, x) recebe uma função e executa a cada x tempo
 
@@ -18,6 +19,9 @@ setInterval(() => {
     console.clear();
     console.log('   === PC STATS ===');
     console.table(stats);
+
+    log(`${JSON.stringify(stats)}\n`)
+
 }, 1000);
 
 
